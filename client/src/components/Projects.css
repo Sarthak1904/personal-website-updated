@@ -1,0 +1,44 @@
+.projects-section {
+  padding: 6rem 0;
+  background-color: #121212;
+  color: white;
+}
+
+.projects-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+  padding: 0 2rem;
+}
+
+.projects-header h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.projects-header p {
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+.projects-list {
+  position: relative;
+}
+
+.card-container {
+  position: sticky;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Stacking logic */
+.card-container:nth-child(1) { top: 6rem; }
+.card-container:nth-child(2) { top: 7rem; }
+.card-container:nth-child(3) { top: 8rem; }
+.card-container:nth-child(4) { top: 9rem; }
+.card-container:nth-child(5) { top: 10rem; }
+.card-container:nth-child(6) { top: 11rem; }
+.card-container:nth-child(7) { top: 12rem; }
+.card-container:nth-child(8) { top: 13rem; }
