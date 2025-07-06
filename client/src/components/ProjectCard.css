@@ -50,29 +50,37 @@
 }
 
 .tech-tag {
-  background-color: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2); /* Darker semi-transparent background */
+  color: #f0f0f0; /* Slightly off-white for a softer look */
   padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-size: 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0 0.5rem 0.5rem 0;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(4px); /* For Safari support */
 }
 
 .view-project-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: none;
-  border: 2px solid currentColor;
-  color: inherit;
-  text-decoration: none;
+  background-color: #0D1117; /* Dark background */
+  color: white; /* White text */
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px; /* Fully rounded corners */
+  font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: 500;
-  border-radius: 4px;
   transition: all 0.3s ease;
   margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .view-project-btn:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background-color: #161b22;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
 }
 
 /* Decorative Circles */

@@ -221,15 +221,18 @@
 .bio-section {
   background-color: #fff;
   color: #333;
-  padding: 15vh 10rem; /* Reverted padding */
+  padding: 15vh 0; /* Only vertical padding */
+  display: flex; /* Make it a flex container */
+  justify-content: center; /* Center the child horizontally */
 }
 
 .bio-container {
   display: flex;
   align-items: center;
   gap: 4rem;
-  max-width: 1400px; /* Increased width */
-  margin: 0 auto;
+  /* max-width: 1400px; */
+  /* width: 100%; /* Ensure it fills the available space correctly */
+  /* padding: 0 10rem; Keep a safe distance from screen edges */ 
 }
 
 .bio-text-content {
