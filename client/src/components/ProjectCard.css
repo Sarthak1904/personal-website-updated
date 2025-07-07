@@ -114,3 +114,60 @@
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.15);
 } 
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .project-card {
+    padding: 2rem;
+    height: auto;
+  }
+
+  .card-content {
+    max-width: 100%;
+  }
+
+  .card-content h2 {
+    font-size: 2rem;
+  }
+
+  .card-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-tags {
+    margin-bottom: 2rem;
+  }
+
+  .decorative-circles {
+    bottom: -100px;
+    right: -100px;
+    width: 250px;
+    height: 250px;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .card-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+
+  .view-project-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  .decorative-circles {
+    display: none;
+  }
+}
+

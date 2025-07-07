@@ -1,10 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Effect to close the menu when the route changes
+  useEffect(() => {
+    closeMenu();
+  }, [location]);
+  
+  // Effect for scrolling to sections
   useEffect(() => {
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1));
@@ -22,21 +37,35 @@ const Navbar = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
+    closeMenu(); // Close menu after clicking
   };
 
   return (
     <nav className="navbar">
-      <Link to="/" className="nav-logo">
+      <Link to="/" className="nav-logo" onClick={closeMenu}>
         <span className="nav-logo-dot"></span>Sarthak
       </Link>
-      <div className="nav-links">
-        <Link to="/about">ABOUT</Link>
+      
+      {/* Hamburger Menu Button */}
+      <button 
+        className={`hamburger-menu ${isMenuOpen ? 'open' : ''}`} 
+        onClick={toggleMenu}
+        aria-label="Toggle navigation"
+      >
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </button>
+
+      {/* Navigation Links */}
+      <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+        <Link to="/about" onClick={closeMenu}>ABOUT</Link>
         <Link to="/#work" onClick={handleWorkClick}>WORK</Link>
-        <Link to="/contact">CONTACT</Link>
-        <a href="/resume" className="nav-resume-link">RESUME</a>
+        <Link to="/contact" onClick={closeMenu}>CONTACT</Link>
+        <a href="/resume" className="nav-resume-link" onClick={closeMenu}>RESUME</a>
       </div>
     </nav>
   );
 };
 
-export default Navbar; 
+export default Navbar;  

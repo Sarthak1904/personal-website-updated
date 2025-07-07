@@ -93,3 +93,36 @@
   background-color: #333;
   color: #fff;
 }
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .connect-section {
+    padding: 4rem 1.5rem;
+  }
+  .connect-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .connect-header h2 {
+    font-size: 1.6rem;
+  }
+  .email-container {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+  .connect-text {
+    font-size: 1rem;
+    text-align: left;
+    max-width: 100%;
+  }
+  .connect-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-linkedin,
+  .btn-resume-dark {
+    text-align: center;
+  }
+}

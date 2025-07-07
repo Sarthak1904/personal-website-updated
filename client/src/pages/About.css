@@ -28,8 +28,8 @@
   width: 100%;
   height: 100%;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+   linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+   linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
   background-size: 80px 80px;
   z-index: 0;
 }
@@ -122,12 +122,12 @@
 }
 
 .hero-image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
 }
 
 .hero-image {
@@ -146,12 +146,12 @@
 }
 
 .hero-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-    transition: transform 0.3s ease-in-out;
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: inherit;
+   transition: transform 0.3s ease-in-out;
 }
 
 .hero-image:hover img {
@@ -199,14 +199,14 @@
 }
 
 .image-4 img {
-    width: 130px;
-    height: 130px;
-    border-radius: 12px;
+   width: 130px;
+   height: 130px;
+   border-radius: 12px;
 }
 
 .spotify-icon {
-    font-size: 5rem;
-    color: #1DB954;
+   font-size: 5rem;
+   color: #1DB954;
 }
 
 .image-5 {
@@ -300,13 +300,13 @@
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.7);
+   box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(0, 168, 107, 0);
+   box-shadow: 0 0 0 10px rgba(0, 168, 107, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(0, 168, 107, 0);
+   box-shadow: 0 0 0 0 rgba(0, 168, 107, 0);
   }
 }
 
@@ -384,5 +384,89 @@
 }
 
 .approach-dots .dot.active {
-  background-color: #e06535;
-} 
+  background-color: #2563EB;
+  transform: scale(1.3);
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Tablet and smaller desktops */
+@media (max-width: 1200px) {
+  .hero-text-content h1 {
+   font-size: 2.8rem;
+  }
+  .bio-container {
+   flex-direction: column;
+   text-align: center;
+   gap: 3rem;
+  }
+  .bio-text-content {
+   max-width: 700px;
+  }
+  .approach-grid {
+   grid-template-columns: 1fr;
+   gap: 2rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero-image {
+   display: none; /* Hide complex hero images on tablets */
+  }
+  .hero-text-content {
+   width: 90%;
+  }
+  .hero-text-content h1 {
+   font-size: 2.5rem;
+  }
+  .bio-section {
+   padding: 10vh 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 12rem;
+  }
+  
+  .hero-text-content {
+    top: 40%;
+    width: 90%;
+  }
+
+  .hero-text-content h1 {
+   font-size: 2.2rem;
+   line-height: 1.4;
+  }
+  .hero-text-content p {
+   font-size: 1rem;
+  }
+  .hero-status {
+    top: 62%;
+  }
+  .hero-buttons {
+   flex-direction: column;
+   width: 80%;
+    top: 75%;
+  }
+  .bio-section {
+   padding: 8vh 0;
+  }
+  .bio-container {
+   padding: 0 1.5rem;
+  }
+  .bio-title {
+   font-size: 2.5rem;
+  }
+  .approach-section {
+   padding: 8vh 1.5rem;
+  }
+  .approach-title {
+   font-size: 1.8rem;
+  }
+  .approach-subtitle {
+   font-size: 0.95rem;
+  }
+}
