@@ -13,6 +13,7 @@ const About = () => {
       <section className="hero-section">
         <div className="hero-grid-background"></div>
         <div className="hero-image-container">
+          {/* Hero images should load immediately as they are critical for the initial view */}
           <div className="hero-image image-1">
             <img src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/comp%20image/WhatsApp%20Image%202025-06-30%20at%2016.21.51_6576143a.webp" alt="Man working at a desk" />
           </div>
@@ -72,7 +73,14 @@ const About = () => {
             </div>
           </div>
           <div className="bio-image-content">
-            <img src="https://raw.githubusercontent.com/Sarthak1904/personal-website/refs/heads/main/sarthak%20about%20me%20.png" alt="An illustration of Sarthak" className="bio-image" />
+            {/* --- FIX: Added lazy loading and async decoding for below-the-fold images to improve performance --- */}
+            <img 
+              src="https://raw.githubusercontent.com/Sarthak1904/personal-website/refs/heads/main/sarthak%20about%20me%20.png" 
+              alt="An illustration of Sarthak" 
+              className="bio-image"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
@@ -124,7 +132,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* MODIFIED SECTION: Removed position and zIndex to fix overlap */}
       <div style={{ background: '#fff',paddingBottom: '30rem' }}>
         <ImageGrid />
       </div>
