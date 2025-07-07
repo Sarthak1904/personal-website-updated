@@ -6,21 +6,21 @@ import './ImageGrid.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const imageUrls = [
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img1-min.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img3-min.JPG',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img4-min.JPG',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img5-min.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img6-min.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img7-min.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img8-min.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img9-min.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img10-min.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img11-min.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img12-min.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img13-min.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img14-min.JPG',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img15-min.JPG',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/_MG_1978.jpeg'
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img1-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img11-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img4-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img5-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img6-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img7-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img8-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img9-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img3-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img10-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img12-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img13-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img14-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/img15-min.webp',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/CompressImage.com/_MG_1978.webp'
 ];
 
 // Generate an array of 14 images for the grid from the provided URL

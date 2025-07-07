@@ -56,7 +56,7 @@ const Home = ({ onHover }) => {
           <div className="hero-content">
             {/* --- Images for Desktop View --- */}
             <img
-              src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/_MG_0507.JPG"
+              src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/comp%20image/_MG_0507.webp"
               alt="Sarthak Choudhary"
               className="profile-pic desktop-image"
             />
@@ -69,12 +69,12 @@ const Home = ({ onHover }) => {
 
             <div className="hero-images-right desktop-image">
               <img
-                src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/PXL_20250413_205128481.jpg"
+                src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/comp%20image/PXL_20250413_205128481.webp"
                 alt="Floating scenic"
                 className="floating-image image-top"
               />
               <img
-                src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/IMG_5485.JPG"
+                src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/comp%20image/IMG_5485.webp"
                 alt="Floating scenic"
                 className="floating-image image-bottom"
               />

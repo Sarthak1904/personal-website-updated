@@ -14,20 +14,20 @@ const About = () => {
         <div className="hero-grid-background"></div>
         <div className="hero-image-container">
           <div className="hero-image image-1">
-            <img src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/WhatsApp%20Image%202025-06-30%20at%2016.21.51_6576143a.jpg" alt="Man working at a desk" />
+            <img src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/comp%20image/WhatsApp%20Image%202025-06-30%20at%2016.21.51_6576143a.webp" alt="Man working at a desk" />
           </div>
           <div className="hero-image image-2">
-            <img src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/WhatsApp%20Image%202025-06-30%20at%2016.21.05_7fef3c47.jpg" alt="Street view of The Sphere in Las Vegas" />
+            <img src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/comp%20image/WhatsApp%20Image%202025-06-30%20at%2016.21.05_7fef3c47.webp" alt="Street view of The Sphere in Las Vegas" />
           </div>
           <div className="hero-image image-3">
-            <img src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/AdobeStock_877031131.jpeg" alt="Dual monitor desk setup" />
+            <img src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/comp%20image/AdobeStock_877031131.webp" alt="Dual monitor desk setup" />
           </div>
           <div className="hero-image image-4">
-            <img src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/AdobeStock_141008942.jpeg" alt="Coffee cup on a saucer" />
+            <img src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/comp%20image/AdobeStock_141008942.webp" alt="Coffee cup on a saucer" />
             <FaSpotify className="spotify-icon" />
           </div>
           <div className="hero-image image-5">
-            <img src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/WhatsApp%20Image%202025-06-30%20at%2016.20.33_d9980b49.jpg" alt="Man with a backpack hitchhiking" />
+            <img src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/comp%20image/WhatsApp%20Image%202025-06-30%20at%2016.20.33_d9980b49.webp" alt="Man with a backpack hitchhiking" />
           </div>
         </div>
 
