@@ -6,24 +6,24 @@ import './ImageGrid.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const imageUrls = [
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/WhatsApp%20Image%202025-06-30%20at%2016.24.12_98b0d38a.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img1.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/img15.JPG',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/img3.JPG',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/img4.JPG',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/img5.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img6.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img7.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img8.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img9.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img10.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img11.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img12.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img13.jpg',
-  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/img14.JPG',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img1-min.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img3-min.JPG',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img4-min.JPG',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img5-min.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img6-min.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img7-min.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img8-min.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img9-min.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img10-min.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img11-min.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img12-min.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img13-min.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img14-min.JPG',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/img15-min.JPG',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/_MG_1978.jpeg'
 ];
 
-// Generate an array of 15 images for the grid from the provided URLs
+// Generate an array of 14 images for the grid from the provided URLs
 const images = imageUrls.map((url, index) => {
   const isCenter = index === 7; // The 8th image is the center one
   return {

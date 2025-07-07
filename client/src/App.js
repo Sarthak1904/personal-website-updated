@@ -107,7 +107,7 @@ const Home = ({ onHover }) => {
 
           <div className="button-group">
             <a href="#contact" className="btn btn-primary">Get in touch</a>
-            <button className="btn btn-secondary">Resume</button>
+            <a href="https://drive.google.com/file/d/1ZIA2plYnPdsRts08dncvPUdeOToLyF5s/view" download>  <button className="btn btn-secondary">Resume</button></a>
           </div>
         </div>
       </div>
