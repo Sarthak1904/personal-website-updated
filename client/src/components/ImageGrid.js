@@ -5,13 +5,30 @@ import './ImageGrid.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Generate an array of 15 random images for the grid
-const totalImages = 15;
-const images = Array.from({ length: totalImages }, (_, index) => {
+const imageUrls = [
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/WhatsApp%20Image%202025-06-30%20at%2016.24.12_98b0d38a.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img1.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/img15.JPG',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/img3.JPG',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/img4.JPG',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/img5.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img6.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img7.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img8.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img9.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img10.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img11.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img12.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/main/img13.jpg',
+  'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/img14.JPG',
+];
+
+// Generate an array of 15 images for the grid from the provided URLs
+const images = imageUrls.map((url, index) => {
   const isCenter = index === 7; // The 8th image is the center one
   return {
-    src: `https://picsum.photos/seed/${index + 1}/400/600`,
-    alt: `Random placeholder image ${index + 1}`,
+    src: url,
+    alt: `Image ${index + 1}`,
     isCenter: isCenter,
   };
 });

@@ -123,12 +123,17 @@ const About = () => {
           </div>
         </div>
       </section>
-      <ImageGrid />
-      <div id="contact" style={{ position: 'relative', zIndex: 20, backgroundColor: '#111', paddingTop: '6rem' }}>
+
+      {/* MODIFIED SECTION: Removed position and zIndex to fix overlap */}
+      <div style={{ background: '#fff',paddingBottom: '30rem' }}>
+        <ImageGrid />
+      </div>
+      <div id="contact" style={{ backgroundColor: '#111', paddingTop: '0rem' }}>
         <Connect />
       </div>
+      
     </div>
   );
 };
 
-export default About; 
+export default About;

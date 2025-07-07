@@ -61,8 +61,8 @@ const Navbar = () => {
       <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <Link to="/about" onClick={closeMenu}>ABOUT</Link>
         <Link to="/#work" onClick={handleWorkClick}>WORK</Link>
-        <Link to="/contact" onClick={closeMenu}>CONTACT</Link>
-        <a href="/resume" className="nav-resume-link" onClick={closeMenu}>RESUME</a>
+        {/* <Link to="/contact" onClick={closeMenu}>CONTACT</Link> */}
+        <a href="https://drive.google.com/file/d/1ZIA2plYnPdsRts08dncvPUdeOToLyF5s/view" className="nav-resume-link" onClick={closeMenu}>RESUME</a>
       </div>
     </nav>
   );

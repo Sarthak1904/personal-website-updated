@@ -28,8 +28,8 @@ const Connect = () => {
           Got an idea, opportunity, or just want to say hello? I'm always up for new adventures, fun collaborations, or even just a cup of coffee! 😄
         </p>
         <div className="connect-buttons">
-          <a href="#" className="btn-linkedin">LinkedIn</a>
-          <a href="#" className="btn-resume-dark">Resume</a>
+          <a href="https://www.linkedin.com/in/sarchou/" className="btn-linkedin">LinkedIn</a>
+          <a href="https://drive.google.com/file/d/1ZIA2plYnPdsRts08dncvPUdeOToLyF5s/view" className="btn-resume-dark">Resume</a>
         </div>
       </div>
     </section>

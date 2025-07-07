@@ -15,6 +15,7 @@
   height: 100vh; /* Full viewport height for pinning */
   display: grid;
   place-items: center;
+  background-color: #fff;
 }
 
 .image-grid {
