@@ -23,7 +23,7 @@ const imageUrls = [
   'https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/tinified/_MG_1978.jpeg'
 ];
 
-// Generate an array of 14 images for the grid from the provided URLs
+// Generate an array of 14 images for the grid from the provided URL
 const images = imageUrls.map((url, index) => {
   const isCenter = index === 7; // The 8th image is the center one
   return {
