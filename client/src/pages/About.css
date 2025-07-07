@@ -17,6 +17,7 @@
   overflow: hidden;
   text-align: center;
   padding-top: 8rem; /* Increased top padding */
+  
   box-sizing: border-box; /* Include padding in the height */
 }
 
@@ -35,7 +36,7 @@
 
 .hero-text-content {
   position: absolute;
-  z-index: 10;
+  z-index: 20;
   top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -126,7 +127,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 1800px;
+    max-width: 2000px;
     height: 100%;
     z-index: 1;
 }
@@ -134,7 +135,7 @@
 .hero-image {
   position: absolute;
   border-radius: 20px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.22);
   background-color: #fff;
   overflow: hidden;
   z-index: 5; /* Above grid, below text */
@@ -157,28 +158,28 @@
 
 /* Base positions for large screens */
 .image-1 {
-  width: 240px;
-  height: 300px;
+  width: 200px;
+  height: 250px;
   top: 15%;
-  left: 18%;
+  left: 15%;
   transform: rotate(-10deg);
   --rotate: -10deg;
 }
 
 .image-2 {
-  width: 180px;
-  height: 250px;
-  top: 8%;
+  width: 120px;
+  height: 200px;
+  top: 13%;
   left: 50%;
   transform: translateX(-50%) rotate(3deg);
   --rotate: 3deg;
 }
 
 .image-3 {
-  width: 320px;
-  height: 200px;
+  width: 280px;
+  height: 180px;
   top: 18%;
-  right: 15%;
+  right: 10%;
   transform: rotate(8deg);
   --rotate: 8deg;
 }
@@ -187,7 +188,7 @@
   width: 260px;
   height: 150px;
   bottom: 18%;
-  left: 22%;
+  left: 14%;
   transform: rotate(10deg);
   --rotate: 10deg;
   display: flex;
@@ -200,7 +201,10 @@
     width: 130px;
     height: 130px;
     border-radius: 12px;
+    top: 10%;
+    right: 10%;
 }
+
 
 .spotify-icon {
     font-size: 5rem;
@@ -211,7 +215,7 @@
   width: 300px;
   height: 210px;
   bottom: 15%;
-  right: 18%;
+  right: 10%;
   transform: rotate(-6deg);
   --rotate: -6deg;
 }
