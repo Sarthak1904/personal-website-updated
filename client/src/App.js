@@ -184,14 +184,19 @@ function App() {
 
   return (
     <Router>
-      <div ref={pointerRef} className={`custom-cursor-pointer ${cursorStyle}`}></div>
-      <div
-        ref={bubbleRef}
-        className={`custom-cursor-bubble ${cursorStyle}`}
-        style={{ backgroundColor: cursorColor }}
-      >
-        {cursorText}
-      </div>
+      {////This was done to make a custom cursor which had a bubble which was also blue in color and written you in it
+      /* {showCursor && (
+        <>
+          <div ref={pointerRef} className={`custom-cursor-pointer ${cursorStyle}`}></div>
+          <div
+            ref={bubbleRef}
+            className={`custom-cursor-bubble ${cursorStyle}`}
+            style={{ backgroundColor: cursorColor }}
+          >
+            {cursorText}
+          </div>
+        </>
+      )} */}
 
       <Routes>
         <Route path="/" element={<Home onHover={handleProjectHover} />} />
