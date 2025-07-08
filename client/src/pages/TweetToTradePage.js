@@ -5,33 +5,33 @@ import './TweetToTradePage.css';
 const challenges = [
   {
     id: 1,
-    title: 'Inconsistent Image Data',
-    challenge: 'Our initial dataset was a wild mix of image sizes and colors. A machine learning model thrives on consistency.',
-    solution: 'Standardized all images in our ‘360 Rocks’ dataset to 64x64 pixels and converted to grayscale. This ensured consistent 4,096 features per image while reducing data volume by two-thirds, allowing focus on shapes and textures rather than color variations.',
+    title: 'Capturing the Market Real-Time Pulse',
+    challenge: 'To predict market moves, we first needed to drink from the firehose of real-time financial and social media, a high-volume, multi-source data stream that would crash any conventional system.',
+    solution: 'We built a Kafka-based message queue system to manage high-volume tweet ingestion and an asynchronous Python framework to concurrently pull data from the Twitter API, News API, and Reddit. This created a resilient and fault-tolerant pipeline capable of streaming market and social updates every minute without fail.',
   },
   {
     id: 2,
-    title: 'Dimensionality Reduction',
-    challenge: 'With 4096 pixel features per image, our models would have drowned in noise and complexity, leading to slow training and poor generalization.',
-    solution: 'Standardized all images in our ‘360 Rocks’ dataset to 64x64 pixels and converted to grayscale. This ensured consistent 4,096 features per image while reducing data volume by two-thirds, allowing focus on shapes and textures rather than color variations.',
+    title: 'Moving Beyond Simple "Positive/Negative" Sentiment',
+    challenge: 'Financial language is filled with jargon, sarcasm, and complex context that basic NLP models like VADER completely miss. We needed a deeper level of language understanding to achieve meaningful accuracy.',
+    solution: 'We integrated advanced language models, specifically FinBERT and OpenAI\'s GPT-3.5-turbo, to create a hybrid scoring system. This model combined rule-based speed with LLM contextual depth, dramatically improving sentiment classification for finance-specific language. We further enhanced accuracy with a spaCy NER module to ensure sentiment was correctly attributed to the right company ticker.',
   },
   {
     id: 3,
-    title: 'Natural Grouping Discovery',
-    challenge: 'Before building a classifier, we wanted to understand if our ‘rock’ images naturally fell into distinct categories. This insight could guide our classification strategy.',
-    solution: 'Standardized all images in our ‘360 Rocks’ dataset to 64x64 pixels and converted to grayscale. This ensured consistent 4,096 features per image while reducing data volume by two-thirds, allowing focus on shapes and textures rather than color variations.',
+    title: 'Finding the True Link Between Hype and Price',
+    challenge: 'With accurate sentiment scores, the next challenge was to prove a statistical link between a spike in public mood and a subsequent market reaction, filtering out random noise.',
+    solution: 'We conducted rigorous time-series analysis, using Granger causality tests and cross-correlation heatmaps to identify statistically significant lead-lag relationships. We engineered custom features like rolling sentiment volatility and bullish/bearish mention density to quantify the texture of public discourse, providing rich input for our predictive models.',
   },
   {
     id: 4,
-    title: 'Robust Classification',
-    challenge: 'Our initial dataset was a wild mix of image sizes and colors. A machine learning model thrives on consistency.',
-    solution: 'Standardized all images in our ‘360 Rocks’ dataset to 64x64 pixels and converted to grayscale. This ensured consistent 4,096 features per image while reducing data volume by two-thirds, allowing focus on shapes and textures rather than color variations.',
+    title: 'Turning Historical Correlation into Future Prediction',
+    challenge: 'Identifying past relationships is one thing; predicting the future is another. The ultimate goal was to build a model that could forecast short-term price direction with a quantifiable edge.',
+    solution: 'We trained an ensemble ML model (Random Forest, XGBoost, Logistic Regression) to predict short-term stock movement. The model was fed a rich diet of features, including technical indicators (RSI, MACD), sentiment trends, and volume anomalies. This predictive engine achieved ~72% accuracy (ROC-AUC > 0.75) on high-volatility stocks, validated through robust, time-aware cross-validation methods.',
   },
   {
     id: 5,
-    title: 'Generative Validation',
-    challenge: 'Our initial dataset was a wild mix of image sizes and colors. A machine learning model thrives on consistency.',
-    solution: 'Standardized all images in our ‘360 Rocks’ dataset to 64x64 pixels and converted to grayscale. This ensured consistent 4,096 features per image while reducing data volume by two-thirds, allowing focus on shapes and textures rather than color variations.',
+    title: 'Building a Scalable and Production-Ready Backend',
+    challenge: 'A predictive model is useless without a scalable, secure, and reliable system to serve its insights. The architecture needed to support real-time requests, periodic model retraining, and continuous operation.',
+    solution: 'We developed a modular backend using FastAPI with a Celery and Redis task queue for scheduling asynchronous jobs like model retraining and data aggregation. The entire ecosystem of microservices was containerized with Docker, and a full CI/CD pipeline using GitHub Actions was set up for automated testing and deployment, ensuring production-grade reliability.',
   },
 ];
 
@@ -66,7 +66,7 @@ const TweetToTradePage = () => {
             <span>🏷️ Machine Learning</span>
           </div>
           <h1 className="project-title">
-            From Pixels to Patterns: How We Taught a Machine to See - The Visual & Quantitative Deep Dive
+          From Hype to Alpha: How We Taught a Machine to Predict Markets from Social Media - An LLM & Predictive Analytics Deep Dive
           </h1>
         </div>
         <img 
@@ -80,16 +80,10 @@ const TweetToTradePage = () => {
           <h2 className="description-title">Project description</h2>
           <div className="description-text">
             <p>
-              Ever wonder how your phone's gallery can recognize faces or how a self-driving car
-              navigates the world? It all comes down to teaching machines to "see" and
-              understand images. We recently tackled a similar challenge: could we build a model
-              that accurately interprets and classifies images?
+            In today's market, a single tweet can send a stock soaring or tumbling. Public sentiment has become a powerful, yet notoriously chaotic, force in finance. But how can this firehose of opinions, memes, and news be systematically measured and used? Can you separate the genuine market-moving signals from the noise? We set out to answer this by building Tweet-to-Trade, an end-to-end system designed to listen to the digital world, understand its mood with advanced AI, and predict its impact on the stock market.
             </p>
             <p>
-              This wasn't just an academic exercise. We wanted to build a system that was smart,
-              efficient, and--most importantly--didn't just "memorize" the answers. Here's a look
-              at the technical problem we faced, the precise path we took, the quantitative results
-              we achieved, and the key visualizations that guided our decisions along the way.
+            This was not just an exercise in data collection. Our goal was to create a full-fledged predictive engine that could ingest massive data streams in real time, apply nuanced, LLM-powered language understanding, and ultimately generate actionable intelligence on short-term price movements. Here’s a look at the complex data and AI challenges we overcame and the predictive system we built from scratch.
             </p>
           </div>
         </div>
@@ -106,23 +100,14 @@ const TweetToTradePage = () => {
           <h3 className="description-title">The Problem statement:</h3>
           <div className="description-text">
             <p>
-              Our goal was to develop an accurate image classification model, but the high
-              dimensionality of image data presented a significant challenge. For instance, a
-              256x256 pixel image has 65,536 features, leading to computational inefficiency
-              and the curse of dimensionality, which causes sparse data, longer training times,
-              and overfitting.
-            </p>
-            <p>
-              Therefore, our problem was twofold:
+            Our mission was to systematically trade on public sentiment, which presented two core challenges:
             </p>
             <ul>
               <li>
-                How can we efficiently reduce image data dimensionality (e.g., preserving 90%
-                of variance) while retaining crucial information?
+              <b>The Signal-from-Noise Problem:</b> How do you ingest and process a massive, high-velocity stream of noisy social media data (~50 tweets/sec), understand its complex and often sarcastic sentiment with high accuracy, and correctly correlate these fleeting signals with specific stock market movements?
               </li>
               <li>
-                How do we use this reduced data to train a robust classification model that
-                performs well on new images?
+              <b>The Predictive Intelligence Problem:</b> How do you move beyond simple correlation and build a machine learning model that can use this sentiment data to generate reliable, forward-looking predictions about stock price movements, all architected on a scalable and resilient backend infrastructure?
               </li>
             </ul>
           </div>
@@ -174,19 +159,10 @@ const TweetToTradePage = () => {
           </div>
           <div className="description-text">
             <p>
-              The project yielded highly successful results and several key takeaways that
-              validate our approach. We achieved a massive data compression, reducing the
-              image data by over 99.9% from 160,000 features down to a highly efficient set of
-              just 146 components, all while retaining 90% of the essential visual information.
-              This is a critical takeaway, as this efficiency makes the model ideal for the fast,
-              lightweight mobile app we are building.
+            This project successfully created an end-to-end platform that transforms chaotic public discourse into a quantifiable, predictive financial edge. The system's ability to achieve ~72% accuracy in predicting short-term price movements validates the core thesis: that LLM-enhanced sentiment, when correctly processed and analyzed, contains significant predictive power.
             </p>
             <p>
-              More importantly, the results prove our model truly understands the data; the
-              features it extracted were so meaningful that even the top two components alone
-              could visually separate the different rock categories. This provides a powerful and
-              reliable foundation, confirming that the final predictive AI is built on a solid
-              understanding of the rocks' distinct visual patterns.
+            The key takeaway is that we have built a highly scalable and extensible foundation for a new class of financial intelligence. The architecture is not just an analytical tool but a learning system, ready to be expanded with reinforcement learning trading agents, automated news summarization, and integration into emerging DeFi markets. This project proves that the fusion of real-time data engineering, advanced LLMs, and machine learning can create powerful, predictive insights in one of the world's most competitive domains.
             </p>
           </div>
         </div>

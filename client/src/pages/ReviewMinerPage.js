@@ -5,33 +5,33 @@ import './ReviewMinerPage.css';
 const challenges = [
   {
     id: 1,
-    title: 'Inconsistent Image Data',
-    challenge: 'Our initial dataset was a wild mix of image sizes and colors. A machine learning model thrives on consistency.',
-    solution: 'Standardized all images in our ‘360 Rocks’ dataset to 64x64 pixels and converted to grayscale. This ensured consistent 4,096 features per image while reducing data volume by two-thirds, allowing focus on shapes and textures rather than color variations.',
+    title: 'Taming the Flood of Customer Feedback',
+    challenge: 'Our first obstacle was ingesting massive, messy datasets from sources like Amazon and Yelp. The data was inconsistent, riddled with spam, and too large for simple scripts to handle.',
+    solution: 'We built a scalable ingestion pipeline using Python and Dask to process huge CSV/JSON files efficiently. We developed a custom filtering engine to clean the data, remove spam, and isolate high-signal content like verified purchases and detailed low-star ratings, ensuring our analysis was focused on what mattered most.',
   },
   {
     id: 2,
-    title: 'Dimensionality Reduction',
-    challenge: 'With 4096 pixel features per image, our models would have drowned in noise and complexity, leading to slow training and poor generalization.',
-    solution: 'Standardized all images in our ‘360 Rocks’ dataset to 64x64 pixels and converted to grayscale. This ensured consistent 4,096 features per image while reducing data volume by two-thirds, allowing focus on shapes and textures rather than color variations.',
+    title: 'Moving Beyond Keywords to True Comprehension',
+    challenge: 'Basic NLP can extract keywords, but it fails to understand context. We needed a system that could grasp sarcasm, mixed sentiment, and complex sentence structures to achieve true understanding.',
+    solution: 'We integrated Hugging Face Transformers (DistilBERT & RoBERTa) into our NLP pipeline. These models replaced older, rule-based methods and provided a far more accurate, fine-grained sentiment classification. This allowed us to correctly interpret reviews where a customer might praise one feature while criticizing another in the same sentence.',
   },
   {
     id: 3,
-    title: 'Natural Grouping Discovery',
-    challenge: 'Before building a classifier, we wanted to understand if our ‘rock’ images naturally fell into distinct categories. This insight could guide our classification strategy.',
-    solution: 'Standardized all images in our ‘360 Rocks’ dataset to 64x64 pixels and converted to grayscale. This ensured consistent 4,096 features per image while reducing data volume by two-thirds, allowing focus on shapes and textures rather than color variations.',
+    title: 'Discovering What Customers Really Talk About',
+    challenge: 'We needed to automatically discover and categorize the key themes hidden in the text without creating manual lists of features. What were the emerging, unknown issues and highlights for each product?',
+    solution: 'We used BERTopic, a state-of-the-art technique that combines transformer embeddings with clustering algorithms. This allowed us to move beyond simple keyword clouds to generate rich, context-aware topics like “battery swelling issues,” “inconsistent clothing fit,” or “delivery delays,” providing a clear, automated map of customer concerns.',
   },
   {
     id: 4,
-    title: 'Robust Classification',
-    challenge: 'Our initial dataset was a wild mix of image sizes and colors. A machine learning model thrives on consistency.',
-    solution: 'Standardized all images in our ‘360 Rocks’ dataset to 64x64 pixels and converted to grayscale. This ensured consistent 4,096 features per image while reducing data volume by two-thirds, allowing focus on shapes and textures rather than color variations.',
+    title: 'Turning Millions of Data Points into a Coherent Story',
+    challenge: 'Even with accurate topics and sentiment, presenting raw data to a product manager is ineffective. We needed to summarize the findings into digestible, executive-level narratives.',
+    solution: 'We integrated large language models, including OpenAI\'s GPT-3.5-turbo and Claude, to perform thematic summarization at scale. Using prompt chaining, the system could generate product-level executive summaries, explain complex issues in plain English (e.g., “Users complain the charger is incompatible with international outlets”), and even suggest persona-specific insights.',
   },
   {
     id: 5,
-    title: 'Generative Validation',
-    challenge: 'Our initial dataset was a wild mix of image sizes and colors. A machine learning model thrives on consistency.',
-    solution: 'Standardized all images in our ‘360 Rocks’ dataset to 64x64 pixels and converted to grayscale. This ensured consistent 4,096 features per image while reducing data volume by two-thirds, allowing focus on shapes and textures rather than color variations.',
+    title: 'Building an Automated, Production-Ready Backend',
+    challenge: 'For these insights to be valuable, they had to be fresh. This required a robust backend architecture that could automate the entire pipeline, from data ingestion to model retraining and insight delivery.',
+    solution: 'A FastAPI backend was developed to serve all processed data via REST APIs. We stored structured output in PostgreSQL and indexed vector embeddings with FAISS for powerful semantic search. The entire workflow was automated using Airflow DAGs for scheduled batch processing, ensuring our insights were always up-to-date.',
   },
 ];
 
@@ -66,7 +66,7 @@ const ReviewMinerPage = () => {
             <span>🏷️ Machine Learning</span>
           </div>
           <h1 className="project-title">
-            From Pixels to Patterns: How We Taught a Machine to See - The Visual & Quantitative Deep Dive
+          From Chatter to Clarity: How We Taught a Machine to Understand the Voice of the Customer - An NLP & LLM Deep Dive
           </h1>
         </div>
         <img 
@@ -80,16 +80,10 @@ const ReviewMinerPage = () => {
           <h2 className="description-title">Project description</h2>
           <div className="description-text">
             <p>
-              Ever wonder how your phone's gallery can recognize faces or how a self-driving car
-              navigates the world? It all comes down to teaching machines to "see" and
-              understand images. We recently tackled a similar challenge: could we build a model
-              that accurately interprets and classifies images?
+            In the world of e-commerce, customer reviews are a goldmine of information. Yet for most businesses, this goldmine is inaccessible, buried under a mountain of unstructured text, star ratings, and spam. How do you find the critical signal in the noise? How can you learn about a critical flaw in your product when that feedback is scattered across thousands of reviews? We set out to solve this problem by building ReviewMiner, an intelligent engine that doesn't just count stars, but reads, understands, and summarizes customer feedback at scale.
             </p>
             <p>
-              This wasn't just an academic exercise. We wanted to build a system that was smart,
-              efficient, and--most importantly--didn't just "memorize" the answers. Here's a look
-              at the technical problem we faced, the precise path we took, the quantitative results
-              we achieved, and the key visualizations that guided our decisions along the way.
+            This project was about creating a system that could move beyond simple sentiment and uncover the why behind customer opinions. We aimed to build an end-to-end pipeline that could process millions of reviews, identify specific topics of discussion, analyze the nuanced sentiment for each, and deliver concise, actionable insights to drive better product decisions. Here’s a look at the complex NLP challenges we solved and the powerful analytical engine we engineered.
             </p>
           </div>
         </div>
@@ -106,23 +100,15 @@ const ReviewMinerPage = () => {
           <h3 className="description-title">The Problem statement:</h3>
           <div className="description-text">
             <p>
-              Our goal was to develop an accurate image classification model, but the high
-              dimensionality of image data presented a significant challenge. For instance, a
-              256x256 pixel image has 65,536 features, leading to computational inefficiency
-              and the curse of dimensionality, which causes sparse data, longer training times,
-              and overfitting.
+            Our goal was to unlock the strategic value hidden within customer feedback, which presented two fundamental challenges:
             </p>
-            <p>
-              Therefore, our problem was twofold:
-            </p>
+            
             <ul>
               <li>
-                How can we efficiently reduce image data dimensionality (e.g., preserving 90%
-                of variance) while retaining crucial information?
+              <b>The Data Intelligence Problem:</b> How can we automatically and accurately extract structured information (vendor, amount, date, line items) from unstructured and varied sources like digital receipts and invoices, and then intelligently assign the correct spending category without human intervention?
               </li>
               <li>
-                How do we use this reduced data to train a robust classification model that
-                performs well on new images?
+              <b>The Infrastructure & Cost Problem:</b> How do we build a backend system that is powerful enough to handle a high volume of data processing, yet lean enough to be extremely cost-effective? We needed a solution that could scale instantly for thousands of uploads without the high cost and maintenance of traditional servers.
               </li>
             </ul>
           </div>
@@ -174,19 +160,10 @@ const ReviewMinerPage = () => {
           </div>
           <div className="description-text">
             <p>
-              The project yielded highly successful results and several key takeaways that
-              validate our approach. We achieved a massive data compression, reducing the
-              image data by over 99.9% from 160,000 features down to a highly efficient set of
-              just 146 components, all while retaining 90% of the essential visual information.
-              This is a critical takeaway, as this efficiency makes the model ideal for the fast,
-              lightweight mobile app we are building.
+            The ReviewMiner engine proved to be exceptionally effective, transforming raw customer feedback into a strategic asset. Its most significant achievement was its ability to surface critical product weaknesses—like “battery swelling” in electronics—months before they appeared in official complaints or warranty claims. This allowed for proactive, data-driven prioritization of feature fixes and support strategies.
             </p>
             <p>
-              More importantly, the results prove our model truly understands the data; the
-              features it extracted were so meaningful that even the top two components alone
-              could visually separate the different rock categories. This provides a powerful and
-              reliable foundation, confirming that the final predictive AI is built on a solid
-              understanding of the rocks' distinct visual patterns.
+            The key takeaway is that by combining modern NLP, advanced topic modeling, and LLM-powered summarization, we successfully built a system that acts as the "voice of the customer" at a massive scale. It moves a business from a reactive to a proactive stance, proving that deep textual analysis is no longer a luxury but a critical tool for product intelligence and competitive advantage in the e-commerce landscape.
             </p>
           </div>
         </div>
