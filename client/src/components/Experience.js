@@ -8,7 +8,7 @@ const experienceData = [
     position: 'Software Developer',
     location: 'Indiana, United States',
     industry: 'Education',
-    description: 'Built a scalable question-generation platform using React, Node.js, and MongoDB, serving 300+ students monthly. Integrated CI/CD pipelines with Jenkins and Docker to reduce deployment time by 35%, improved REST API documentation to cut developer onboarding by 20 hours, and collaborated with cross-functional teams to refine user experience.',
+    description: 'Engineered a high-throughput data pipeline using Python and Google Maps API to process over one million geospatial data points daily for large-scale financial market research. Designed a distributed computing solution with MapReduce and NoSQL, improving data processing efficiency by 40% and enabling advanced algorithmic analysis. Re-architected statistical sampling algorithms, cutting data acquisition costs by 30% while boosting coverage across key markets. Built and documented a comprehensive data framework that streamlined workflows, halved onboarding and data access time, and supported scalable organizational growth.',
   },
   {
     company: 'DataToBiz',
@@ -16,7 +16,7 @@ const experienceData = [
     position: 'Full Stack Developer ',
     location: 'Mohali, India',
     industry: 'Tech Startup',
-    description: 'Built a scalable question-generation platform using JavaScript, Node.js, and React, improving curriculum efficiency by 40% and serving 300+ students monthly. Implemented CI/CD pipelines to reduce deployment time by 35% and streamline integration. Integrated ML models with TensorFlow and Scikit-learn to personalize quiz recommendations and boost student engagement',
+    description: 'Led full-stack development of a MERN-based question-generation platform, scaling it to 5,000+ monthly active students with 99.9% uptime. Built a CI/CD pipeline using Jenkins and Docker, cutting deployment time from hours to under 15 minutes and improving efficiency by 35%. Introduced OpenAPI specs for REST APIs, standardizing documentation and saving 20+ hours per engineer during onboarding. Translated user feedback into key features, boosting user satisfaction by 25% and daily engagement by 15%.',
   },
   {
     company: 'Highradius',
@@ -24,7 +24,7 @@ const experienceData = [
     position: 'Software Developer',
     location: 'Hyderabad, India',
     industry: 'FinTech',
-    description: 'Developed an e-learning platform using C# and .NET 5 with the MVC pattern, integrating SignalR for real-time collaboration on digital whiteboards. Built a robust data system with Entity Framework, MSSQL, and LINQ for optimized retrieval. Streamlined deployments with CI/CD pipelines in Azure DevOps and enhanced team efficiency using JIRA for workflow management.',
+    description: 'Managed 5 production applications as a Database Administrator, leading zero-downtime backend migrations from MSSQL to PostgreSQL. Re-architected schemas for 3 internal apps with improved normalization and indexing, enhancing query performance by 20% and scalability. Remediated 1,200+ SQL queries and refactored data access layers in 2 ASP.NET apps for PostgreSQL compatibility. Contributed in an Agile environment, helping boost team velocity by 15% and cut critical production bugs by 30% through code reviews and sprint planning.',
   },
   {
     company: 'Ananta Resource Management',
@@ -32,7 +32,7 @@ const experienceData = [
     position: 'Android Developer',
     location: 'Mumbai, India',
     industry: 'Tech Startup',
-    description: 'Built a hotel management platform using Flutter with MVC architecture and GetX, enabling owners to list rooms and manage bookings. Integrated GraphQL for backend services and implemented a responsive design for seamless use across devices. Actively incorporated user feedback to enhance usability and increase client satisfaction.',
+    description: 'Built a cross-platform booking app using Flutter, adopted by 50+ hotel owners in six months. Implemented a scalable MVC architecture and integrated GraphQL, reducing data payload by 30% and API response time by 200ms. Designed a responsive UI for consistent multi-device experience, increasing user retention by 20% and session duration by 15%. Delivered 3 major updates based on client feedback, earning a 4.5-star average rating on app marketplaces.',
   },
 ];
 
