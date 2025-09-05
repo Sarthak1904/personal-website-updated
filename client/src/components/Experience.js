@@ -27,12 +27,12 @@ const experienceData = [
     description: 'Managed 5 production applications as a Database Administrator, leading zero-downtime backend migrations from MSSQL to PostgreSQL. Re-architected schemas for 3 internal apps with improved normalization and indexing, enhancing query performance by 20% and scalability. Remediated 1,200+ SQL queries and refactored data access layers in 2 ASP.NET apps for PostgreSQL compatibility. Contributed in an Agile environment, helping boost team velocity by 15% and cut critical production bugs by 30% through code reviews and sprint planning.',
   },
   {
-    company: 'Ananta Resource Management',
-    period: 'JUN 2021-DEC 2021',
-    position: 'Android Developer',
-    location: 'Mumbai, India',
+    company: 'Nakshatra Upscale',
+    period: 'FEB 2020-NOV 2021',
+    position: 'Full Stack Developer',
+    location: 'Banglore, India',
     industry: 'Tech Startup',
-    description: 'Built a cross-platform booking app using Flutter, adopted by 50+ hotel owners in six months. Implemented a scalable MVC architecture and integrated GraphQL, reducing data payload by 30% and API response time by 200ms. Designed a responsive UI for consistent multi-device experience, increasing user retention by 20% and session duration by 15%. Delivered 3 major updates based on client feedback, earning a 4.5-star average rating on app marketplaces.',
+    description: 'Designed and developed a responsive, user-friendly web interface to visualize and manage construction project data, including costs and timelines, by integrating with a Python-based RESTful API. I created reusable UI components and implemented form validation to improve data entry and ensure data integrity. Additionally, I built and maintained the company\'s public-facing website to showcase project portfolios, optimizing its performance and enhancing the overall user experience.',
   },
 ];
 
