@@ -97,11 +97,14 @@ h3.description-title {
 }
 
 .placeholder-block {
-    height: 400px;
-    width: 100%;
+    width: 40px;           /* fixed width; adjust as needed */
+    max-width: 100%;        /* prevents overflow on small screens */
+    height: auto;           /* maintains aspect ratio */
+    display: block;         /* allows centering with margin auto */
     border-radius: 8px;
-    margin: 3rem 0;
-}
+    margin: 3rem auto;      /* centers image and keeps existing spacing */
+  }
+  
 
 .section-title {
     font-size: 1.8rem;

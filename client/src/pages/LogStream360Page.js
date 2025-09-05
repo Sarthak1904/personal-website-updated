@@ -5,33 +5,33 @@ import './LogStream360Page.css';
 const challenges = [
   {
     id: 1,
-    title: 'Taming the Firehose of Real-Time Data',
-    challenge: 'The first hurdle was to capture and aggregate a massive, continuous stream of logs from dozens of sources without losing a single entry. The system had to be capable of immediate analysis and alerting.',
-    solution: 'We architected a real-time data streaming pipeline using AWS Kinesis Data Streams for high-throughput ingestion. This was combined with CloudWatch Logs for aggregation and CloudWatch Alarms for threshold-based alerting. This powerful setup enabled us to achieve incident detection and alerting in under 5 seconds, dramatically reducing response times.',
+    title: 'Designing for the Entire User Journey',
+    challenge: `Our initial project focused on a browser extension for a single task: quickly saving job listings. We quickly realized this was a narrow solution to a much broader problem. The user's journey extends far beyond saving a link, it includes tracking applications, managing contacts, and preparing for interviews.`,
+    solution: `We pivoted to a full-scale web application to create a single, comprehensive platform. This required a complete redesign of our information architecture and a focus on mapping out the entire user flow, from initial search to offer acceptance. I used Figma to build out the wireframes and high-fidelity mockups, ensuring a seamless and intuitive experience across all stages of the job hunt.`,
   },
   {
     id: 2,
-    title: 'Building a Powerful and Queryable Backend',
-    challenge: 'Once the data was captured, we needed a robust backend that could store it efficiently and allow for complex, high-speed queries. Standard database designs would not suffice for time-series log data.',
-    solution: 'We implemented a scalable Node.js service with a PostgreSQL database. The database schema was meticulously optimized for time-series data, enabling dynamic filtering, aggregations, and fast, indexed searches. To ensure security, we integrated role-based API endpoints for controlled data access.',
+    title: 'Bridging the Gap Between Extension and Web App',
+    challenge: `The user experience needed to feel seamless between the lightweight browser extension and the robust web application. A user should be able to save a job in one click via the extension and see it instantly reflected in their main dashboard on the web app. This required real-time data synchronization.`,
+    solution: `I implemented a RESTful API and leveraged full-stack development to create a shared backend. The extension communicated with the API to save job data, and the web application fetched this data in real-time. This ensured data consistency and a cohesive user experience, no matter which tool the user was on.`,
   },
   {
     id: 3,
-    title: 'Translating Raw Data into Human Insight',
-    challenge: 'Numbers and logs are meaningless without interpretation. We needed an intuitive interface where engineers could easily visualize trends, spot anomalies, and diagnose issues without writing a single database query.',
-    solution: 'A responsive dashboard was developed using Angular, featuring interactive visualizations built with Chart.js and D3.js. Time-series plots, pie charts, and stacked bar charts gave users a clear view of error types, frequency trends, and service-specific anomalies, turning raw data into actionable insights.',
+    title: 'Building a Scalable Frontend',
+    challenge: `The application's dashboard required dynamic and complex UI components, such as a Kanban board for tracking applications and a calendar for scheduling interviews. We needed a frontend framework that could handle state management efficiently and scale as we added more features.`,
+    solution: `I chose React as the primary frontend library. Its component-based architecture allowed for modular, reusable code. I used React Hooks to manage component state and implemented a robust state management pattern to handle the flow of data across the application. This approach ensured that the UI remained performant and easy to maintain as the project grew.`,
   },
   {
     id: 4,
-    title: 'Automating for Scale and Reliability',
-    challenge: 'A complex, multi-component application like this is impossible to manage manually. We needed to ensure that we could deploy, scale, and update the entire platform reliably and repeatedly with minimal human intervention.',
-    solution: 'We containerized the entire application stack using Docker and provisioned the cloud infrastructure as code with Terraform. A full CI/CD pipeline was configured using GitHub Actions to automate all testing, building, and deployment processes across staging and production environments, ensuring consistency and eliminating manual deployment errors.',
+    title: 'Ensuring a Responsive and Accessible Design',
+    challenge: `Job seekers use various devices, from desktops to mobile phones, often while on the go. The application needed to be fully responsive to provide a consistent experience on any screen size. Additionally, we aimed to meet WCAG 2.1 guidelines to ensure accessibility for all users.`,
+    solution: `I adopted a mobile-first design approach using CSS Flexbox and Grid for layout. I conducted thorough testing on multiple screen sizes and integrated accessibility checks into the development workflow. This included ensuring proper color contrast, keyboard navigation, and meaningful ARIA attributes on interactive elements..`,
   },
   {
     id: 5,
-    title: 'Ensuring Quality and Long-Term Maintainability',
-    challenge: 'A system is only as good as its quality and documentation. We prioritized building a resilient and well-documented platform that other engineers could easily understand, contribute to, and trust.',
-    solution: 'We enforced a rigorous testing culture, achieving over 90% code coverage with unit and integration tests using Jest and Supertest. We also integrated Prometheus metrics for deeper infrastructure monitoring via Grafana and created comprehensive Markdown documentation for architecture, onboarding, and incident response protocols.',
+    title: 'User-Centric Development',
+    challenge: `We needed to validate our design choices and ensure the application truly solved the user's problems. It was crucial to avoid building features that sounded good on paper but didn't meet real-world needs.`,
+    solution: `I conducted several rounds of usability testing and implemented a feedback loop. Using Hotjar and user interviews, we identified pain points and iterated on our designs. This continuous feedback process allowed us to prioritize features like a simple resume builder and a notes section, directly addressing the most pressing user needs.`,
   },
 ];
 
@@ -63,37 +63,31 @@ const LogStream360Page = () => {
         <div className="project-header">
           <div className="project-meta">
             <span>📅 2023</span>
-            <span>🏷️ Machine Learning</span>
+            <span>🏷️ Web Development</span>
           </div>
           <h1 className="project-title">
-            From Noise to Signals: How We Built a System to See and Understand Data in Real-Time - A Full-Stack & DevOps Deep Dive
+          Joblyst
           </h1>
         </div>
         <img 
-          src="https://placehold.co/900x500/EFEFEF/333333?text=Project+Image" 
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/joblyst%20images/k3Tqj5yOWBYlcdyZFNMjCb8rw.webp" 
           alt="Project" 
-          className="project-image" 
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          className="placeholder-block" 
         />
         <div className="project-description">
           <h2 className="description-title">Project description</h2>
           <div className="description-text">
             <p>
-            In any complex system, data is constantly flowing—RESTful APIs, microservices, and file streams generate a torrent of log entries every second. But this data is often just noise, an overwhelming flood that hides critical signals. How can you spot a system failure before it impacts users? How do you turn terabytes of raw text into a clear story about your application's health? We confronted this challenge directly: to build a platform that could not only handle this data deluge but transform it into actionable intelligence.
+            Job seekers often struggle to manage the multiple facets of their search, from tracking applications to preparing for interviews. While a browser extension can assist with small, in-the-moment tasks, it fails to provide a holistic, centralized platform for the entire journey. Therefore, there is a clear need for a comprehensive web application that can handle more intricate interactions and serve as a single source of truth for all job search activities.
             </p>
-            <p>
-            This wasn't just about building a log collector; it was about creating a central nervous system for our infrastructure. We aimed to provide real-time visibility, enable lightning-fast incident detection, and empower our engineering teams with the insights needed to achieve operational excellence. Here’s how we architected the solution from the ground up, the technical problems we solved, and the quantifiable impact it had on our operations.
-            </p>
+            
           </div>
         </div>
 
         <img
-          src="https://placehold.co/900x400/f6eeda/f6eeda.png"
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/joblyst%20images/v6pzu0Er7sHDx7sdtz6aDR4EIFY.webp"
           alt="Placeholder"
           className="placeholder-block"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         />
 
         <div className="project-description">
@@ -107,21 +101,19 @@ const LogStream360Page = () => {
             </p>
             <ul>
               <li>
-                <b>The Visibility & Speed Problem:</b> With logs scattered across numerous services and systems, we had no centralized way to view application behavior in real-time. How could we ingest and process over 100,000 log entries per day and detect critical anomalies fast enough to prevent downtime?
+              <b>Fragmentation of Effort:</b> There is a fundamental lack of a centralized platform to manage the diverse tasks of a job search. Job seekers must manually juggle multiple tools—spreadsheets for tracking applications, calendars for scheduling interviews, and various websites for company research. This disjointed approach leads to inefficiency, data loss, and an increased mental load, making the process overwhelming and prone to errors.
               </li>
               <li>
-                <b>The Scalability & Maintainability Problem:</b> How do we build a high-performance analytics platform—from the data pipeline to the frontend dashboard—that is not only scalable and secure but also easy to deploy, maintain, and test, ensuring long-term reliability and developer efficiency?
+              <b>Disconnection Between Action and Data:</b> The most crucial actions, such as finding and saving a job, often occur on third-party websites. However, the data from these actions (e.g., job description, company name, application deadline) is not seamlessly captured and integrated into the user's personal management system. Our initial solution, a basic browser extension, only partially addressed this, acting as a simple bookmarking tool rather than a bridge to a comprehensive tracking system. This disconnect prevents users from building a holistic, searchable, and actionable history of their job search efforts.
               </li>
             </ul>
           </div>
         </div>
 
         <img
-          src="https://placehold.co/900x400/d4e4d4/d4e4d4.png"
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/joblyst%20images/9cgB6YFwZe326uLeBOR1Z0jRtA.webp"
           alt="Placeholder"
           className="placeholder-block"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         />
 
         <h2 className="section-title">Our Journey Begins: Sculpting Data for Intelligence</h2>
@@ -149,11 +141,9 @@ const LogStream360Page = () => {
         ))}
 
         <img
-          src="https://placehold.co/900x400/fef4e0/fef4e0.png"
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/joblyst%20images/f3wXn8boqiB7GyhavBLkedgNoE.webp"
           alt="Placeholder"
           className="placeholder-block"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         />
 
         <div className="project-description">
@@ -162,10 +152,14 @@ const LogStream360Page = () => {
           </div>
           <div className="description-text">
             <p>
-            This project successfully delivered a mission-critical platform capable of processing over 100,000 log entries daily and providing insights that were previously impossible to obtain. The key takeaway is the fusion of full-stack development and DevOps automation: by building a robust application and supporting it with a fully automated, infrastructure-as-code environment, we created a system that is not only powerful but also resilient, scalable, and highly maintainable.
+            The web application successfully launched and received positive feedback from early users. They praised its ease of use, comprehensive features, and the seamless integration with the browser extension. Our solution provided a significant improvement over the fragmented tools previously used by job seekers.
             </p>
             <p>
-            The platform transformed our operational capability, turning raw machine data into the clear, actionable signals needed for rapid incident response and proactive system improvements. It stands as a testament to how a well-architected system can directly enhance operational agility and drive a culture of reliability.
+            <li>User research is paramount. Pivoting from an extension to a web app was a direct result of listening to our users. A deep understanding of the problem space is essential before writing a single line of code.</li>
+            <li>Full-stack skills are invaluable for UI/UX developers. Understanding how the frontend interacts with the backend is crucial for designing and implementing features like real-time data synchronization and APIs.</li>
+            <li>Scalability matters. Choosing the right technology stack from the start—like React for a complex UI—pays dividends in the long run.</li>
+            <li>Accessibility is not a feature, it's a foundation. Designing and developing with accessibility in mind from day one ensures a better product for everyone and avoids costly retrofitting later.</li>
+            <li>Iterate and validate. Launching a perfect product is less important than launching a useful one. Continuous testing and a feedback loop are the most effective ways to build a product that users will love.</li>
             </p>
           </div>
         </div>

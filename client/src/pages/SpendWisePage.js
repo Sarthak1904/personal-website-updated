@@ -69,7 +69,7 @@ const SpendWisePage = () => {
           </h1>
         </div>
         <img
-          src="https://placehold.co/900x500/EFEFEF/333333?text=Project+Image"
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/Gemini_Generated_Image_bqdpzbqdpzbqdpzb.png"
           alt="Project"
           className="project-image"
           onMouseEnter={handleMouseEnter}
@@ -88,7 +88,7 @@ const SpendWisePage = () => {
         </div>
 
         <img
-          src="https://placehold.co/900x400/f6eeda/f6eeda.png"
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/Gemini_Generated_Image_hqbgd3hqbgd3hqbg.png"
           alt="Placeholder"
           className="placeholder-block"
           onMouseEnter={handleMouseEnter}
@@ -116,7 +116,7 @@ const SpendWisePage = () => {
         </div>
 
         <img
-          src="https://placehold.co/900x400/d4e4d4/d4e4d4.png"
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/Gemini_Generated_Image_armus4armus4armu.png"
           alt="Placeholder"
           className="placeholder-block"
           onMouseEnter={handleMouseEnter}
@@ -147,7 +147,7 @@ const SpendWisePage = () => {
         ))}
 
         <img
-          src="https://placehold.co/900x400/fef4e0/fef4e0.png"
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/Gemini_Generated_Image_6mqgh16mqgh16mqg.png"
           alt="Placeholder"
           className="placeholder-block"
           onMouseEnter={handleMouseEnter}

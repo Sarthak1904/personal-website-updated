@@ -5,33 +5,33 @@ import './ReviewMinerPage.css';
 const challenges = [
   {
     id: 1,
-    title: 'Taming the Flood of Customer Feedback',
-    challenge: 'Our first obstacle was ingesting massive, messy datasets from sources like Amazon and Yelp. The data was inconsistent, riddled with spam, and too large for simple scripts to handle.',
-    solution: 'We built a scalable ingestion pipeline using Python and Dask to process huge CSV/JSON files efficiently. We developed a custom filtering engine to clean the data, remove spam, and isolate high-signal content like verified purchases and detailed low-star ratings, ensuring our analysis was focused on what mattered most.',
+    title: 'Designing for Contextual Feedback',
+    challenge: `How do we enable reviewers to give feedback directly on the visual elements of a portfolio, eliminating the "where is the feedback for?" problem?`,
+    solution: ` I engineered a core annotation feature that allows reviewers to click on any element of a portfolio and leave a comment. This was a significant UI/UX challenge requiring a precise front-end implementation to ensure that annotations were tied to the correct on-screen element, regardless of screen size or layout. I used a custom-built solution to capture element coordinates and display the feedback in a sidebar, providing immediate visual context.`,
   },
   {
     id: 2,
-    title: 'Moving Beyond Keywords to True Comprehension',
-    challenge: 'Basic NLP can extract keywords, but it fails to understand context. We needed a system that could grasp sarcasm, mixed sentiment, and complex sentence structures to achieve true understanding.',
-    solution: 'We integrated Hugging Face Transformers (DistilBERT & RoBERTa) into our NLP pipeline. These models replaced older, rule-based methods and provided a far more accurate, fine-grained sentiment classification. This allowed us to correctly interpret reviews where a customer might praise one feature while criticizing another in the same sentence.',
+    title: 'Consolidating Disparate Feedback Streams',
+    challenge: `How can we centralize feedback from multiple reviewers into a single, organized dashboard, reducing the manual work for the feedback seeker?`,
+    solution: `I designed a comprehensive dashboard that acts as a single source of truth for all feedback. This required full-stack development to manage user authentication and data storage. Using a combination of a front-end framework like React and a backend with Node.js, I built a system that ingests feedback from various sources (the annotation tool, guided questions, etc.) and presents it in an intuitive, filterable view, effectively eliminating the need for designers to use spreadsheets or other manual methods.`,
   },
   {
     id: 3,
-    title: 'Discovering What Customers Really Talk About',
-    challenge: 'We needed to automatically discover and categorize the key themes hidden in the text without creating manual lists of features. What were the emerging, unknown issues and highlights for each product?',
-    solution: 'We used BERTopic, a state-of-the-art technique that combines transformer embeddings with clustering algorithms. This allowed us to move beyond simple keyword clouds to generate rich, context-aware topics like “battery swelling issues,” “inconsistent clothing fit,” or “delivery delays,” providing a clear, automated map of customer concerns.',
+    title: 'Encouraging High-Quality, Actionable Feedback',
+    challenge: `Reviewers often don't know what kind of feedback to give, resulting in generic comments that aren't helpful. How do we guide them to provide more meaningful input?`,
+    solution: `I implemented a feature with guiding questions that designers can provide to their reviewers. This feature presents a small modal with 2-3 specific questions when a reviewer starts to comment, such as "What is your feedback on the project's visual hierarchy?" or "Is the case study's narrative clear?". This UI/UX pattern was designed to prime the reviewer for more focused critique and directly address the problem of "lack of direction" identified in my user research.`,
   },
   {
     id: 4,
-    title: 'Turning Millions of Data Points into a Coherent Story',
-    challenge: 'Even with accurate topics and sentiment, presenting raw data to a product manager is ineffective. We needed to summarize the findings into digestible, executive-level narratives.',
-    solution: 'We integrated large language models, including OpenAI\'s GPT-3.5-turbo and Claude, to perform thematic summarization at scale. Using prompt chaining, the system could generate product-level executive summaries, explain complex issues in plain English (e.g., “Users complain the charger is incompatible with international outlets”), and even suggest persona-specific insights.',
+    title: 'Building a Smart, Data-Driven Interface',
+    challenge: `How can we help designers make sense of a large quantity of feedback and identify high-level themes for improvement?`,
+    solution: `I integrated an AI-powered summarization tool into the feedback dashboard. This feature, leveraging API calls to a large language model, analyzes all the comments on a portfolio and generates a concise summary of recurring themes and common suggestions. This feature provides a high-level overview, helping designers prioritize their work and focus on macro-level improvements rather than getting lost in the details.`,
   },
   {
     id: 5,
-    title: 'Building an Automated, Production-Ready Backend',
-    challenge: 'For these insights to be valuable, they had to be fresh. This required a robust backend architecture that could automate the entire pipeline, from data ingestion to model retraining and insight delivery.',
-    solution: 'A FastAPI backend was developed to serve all processed data via REST APIs. We stored structured output in PostgreSQL and indexed vector embeddings with FAISS for powerful semantic search. The entire workflow was automated using Airflow DAGs for scheduled batch processing, ensuring our insights were always up-to-date.',
+    title: 'User-Centric Development',
+    challenge: ` I needed to validate my ideas and build a working MVP quickly.`,
+    solution: `I conducted several rounds of usability testing with semi-structured interviews and coded the feedback into themes. Based on these insights, I rapidly prototyped the MVP with the MERN stack. This iterative, data-driven approach allowed me to build core features like the annotation tool and a centralized dashboard, proving the value of the product before moving to more advanced features.`,
   },
 ];
 
@@ -63,14 +63,14 @@ const ReviewMinerPage = () => {
         <div className="project-header">
           <div className="project-meta">
             <span>📅 2023</span>
-            <span>🏷️ Machine Learning</span>
+            <span>🏷️ Web Development</span>
           </div>
           <h1 className="project-title">
           From Chatter to Clarity: How We Taught a Machine to Understand the Voice of the Customer - An NLP & LLM Deep Dive
           </h1>
         </div>
         <img 
-          src="https://placehold.co/900x500/EFEFEF/333333?text=Project+Image" 
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/floop/ENsbeK202poM2378B34BjFR0M.avif" 
           alt="Project" 
           className="project-image" 
           onMouseEnter={handleMouseEnter}
@@ -80,16 +80,14 @@ const ReviewMinerPage = () => {
           <h2 className="description-title">Project description</h2>
           <div className="description-text">
             <p>
-            In the world of e-commerce, customer reviews are a goldmine of information. Yet for most businesses, this goldmine is inaccessible, buried under a mountain of unstructured text, star ratings, and spam. How do you find the critical signal in the noise? How can you learn about a critical flaw in your product when that feedback is scattered across thousands of reviews? We set out to solve this problem by building ReviewMiner, an intelligent engine that doesn't just count stars, but reads, understands, and summarizes customer feedback at scale.
+            Current user workflows for requesting feedback on creative projects are disjointed and inefficient. Users must manually share their work across various platforms—sending files via email, gathering comments from chat applications, and consolidating notes from multiple sources. This fragmented process leads to lost or forgotten feedback, delays in project timelines, and a frustrating experience for both the person seeking feedback and the reviewers. We need a centralized system that streamlines this process and improves the quality of feedback.
             </p>
-            <p>
-            This project was about creating a system that could move beyond simple sentiment and uncover the why behind customer opinions. We aimed to build an end-to-end pipeline that could process millions of reviews, identify specific topics of discussion, analyze the nuanced sentiment for each, and deliver concise, actionable insights to drive better product decisions. Here’s a look at the complex NLP challenges we solved and the powerful analytical engine we engineered.
-            </p>
+            
           </div>
         </div>
 
         <img
-          src="https://placehold.co/900x400/f6eeda/f6eeda.png"
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/floop/5cGJywfIgxYn5cDfe1dtvUqx5I.avif"
           alt="Placeholder"
           className="placeholder-block"
           onMouseEnter={handleMouseEnter}
@@ -100,22 +98,22 @@ const ReviewMinerPage = () => {
           <h3 className="description-title">The Problem statement:</h3>
           <div className="description-text">
             <p>
-            Our goal was to unlock the strategic value hidden within customer feedback, which presented two fundamental challenges:
+            Junior designers seeking portfolio reviews face a two-pronged problem that hinders their growth:
             </p>
             
             <ul>
               <li>
-              <b>The Data Intelligence Problem:</b> How can we automatically and accurately extract structured information (vendor, amount, date, line items) from unstructured and varied sources like digital receipts and invoices, and then intelligently assign the correct spending category without human intervention?
+              <b>Feedback Fragmentation and Disorganization:</b> Feedback is often scattered across different platforms like email, chat messages, and informal notes. This fragmentation makes it difficult for designers to consolidate, track, and manage all the comments, leading to a disorganized and inefficient review process.
               </li>
               <li>
-              <b>The Infrastructure & Cost Problem:</b> How do we build a backend system that is powerful enough to handle a high volume of data processing, yet lean enough to be extremely cost-effective? We needed a solution that could scale instantly for thousands of uploads without the high cost and maintenance of traditional servers.
+              <b>Low-Context and Inactionable Feedback:</b> Without a visual connection to the specific part of the portfolio being critiqued, feedback from mentors and peers can be vague and confusing. This low-context feedback leaves junior designers guessing about what to change and what to keep, making it difficult to translate comments into actionable improvements.
               </li>
             </ul>
           </div>
         </div>
 
         <img
-          src="https://placehold.co/900x400/d4e4d4/d4e4d4.png"
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/floop/X8KuLI30bkiCxGak99pclHyA958.avif"
           alt="Placeholder"
           className="placeholder-block"
           onMouseEnter={handleMouseEnter}
@@ -147,7 +145,7 @@ const ReviewMinerPage = () => {
         ))}
 
         <img
-          src="https://placehold.co/900x400/fef4e0/fef4e0.png"
+          src="https://raw.githubusercontent.com/Sarthak1904/portfoilio-new-images/refs/heads/main/floop/znlUXrhBhDKCal0BTCsAHt95Zo.avif"
           alt="Placeholder"
           className="placeholder-block"
           onMouseEnter={handleMouseEnter}
@@ -160,10 +158,22 @@ const ReviewMinerPage = () => {
           </div>
           <div className="description-text">
             <p>
-            The ReviewMiner engine proved to be exceptionally effective, transforming raw customer feedback into a strategic asset. Its most significant achievement was its ability to surface critical product weaknesses—like “battery swelling” in electronics—months before they appeared in official complaints or warranty claims. This allowed for proactive, data-driven prioritization of feature fixes and support strategies.
+            Floop successfully helped feedback seekers manage and organize reviews 3x more efficiently, with user validation confirming a significant reduction in time spent consolidating feedback and a higher perceived quality of comments. The project was recognized for its innovation, winning the Most Innovative Idea at InnoQuest Innovation competition.
             </p>
             <p>
-            The key takeaway is that by combining modern NLP, advanced topic modeling, and LLM-powered summarization, we successfully built a system that acts as the "voice of the customer" at a massive scale. It moves a business from a reactive to a proactive stance, proving that deep textual analysis is no longer a luxury but a critical tool for product intelligence and competitive advantage in the e-commerce landscape.
+            <b>The MERN stack is a powerful tool for a unified development experience.</b> By using a single language (JavaScript) across the entire stack, I was able to rapidly build, debug, and iterate on both the front-end and back-end logic.
+
+            <p>
+            <b>UI/UX is a core component of full-stack development.</b> The technical implementation of features like direct annotation and a centralized dashboard was meaningless without a deep, user-centric understanding of the problem.
+            </p>
+            <p>
+            <b>A simple tool can solve a complex problem.</b> The two-fold problem of fragmentation and low-context feedback was elegantly solved by focusing on the core user needs of organization and visual context.
+            </p>
+            <p>
+            <b>Feedback is the engine of iteration.</b> Continuously seeking and incorporating user feedback was crucial for validating assumptions and prioritizing the right features. The project's success was a direct result of this iterative, user-focused process.
+            </p>
+
+
             </p>
           </div>
         </div>
